@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <p>
+    <p>
+    <table class="table">
+       <thead>
+            <tr>
+                <th scope="col"> Nombre Usuarios </th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for user in users%}
+                <tr>
+                  <td>
+                       <a href="/users/{{user['id']}}">{{user['name']}}</a>
+                  </td>
+                </tr>
+            {%endfor%}
+      </tbody>
+    </table>
+
+    <table class="table">
+       <thead>
+            <tr>
+                <th scope="col"> Nombre Ciudades </th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for city in cities%}
+                <tr>
+                  <td>
+                       <a href="/cities/{{city['id']}}">{{city['name']}}</a>
+                  </td>
+                </tr>
+            {%endfor%}
+      </tbody>
+    </table>
+{% endblock %}

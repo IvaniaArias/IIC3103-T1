@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Ciudades</title>
+{% endblock %}
+
+{% block body %} 
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Pais</th>
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ city['name'] }}</td>
+          <td>{{ city['country'] }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+{% endblock %}
